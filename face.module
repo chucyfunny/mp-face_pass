@@ -1,0 +1,6 @@
+[rewrite_local]
+# 这个规则会拦截到 https://users.mab.console.teamapt.com/api/v1/smile/submit-job 的请求
+^https:\/\/users\.mab\.console\.teamapt\.com\/api\/v1\/smile\/submit-job url script-request-body smile_submit_job.js
+
+[mitm]
+hostname = users.mab.console.teamapt.com
